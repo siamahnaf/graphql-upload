@@ -10,7 +10,7 @@ async function startServer() {
     await apolloServer.start();
     apolloServer.applyMiddleware({app});
     app.use('/', (req, res) => {
-        res.send("Welcome to Graphql Upload!")
+       res.send("Welcome to Graphql Upload!")
     })
 };
 
