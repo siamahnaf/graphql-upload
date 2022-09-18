@@ -11,7 +11,7 @@ module.exports = {
     Mutation: {
         singleUpload: async (_, {file}) => {
             const imageUrl = await readFile(file);
-            const singlefile = new SingleFile({image: imageUrl});
+            const singlefile = new SingleFile({image: imageUrl}); // saving image url in db
             await singlefile.save();
             return {
                 message: "Single file uploaded successfully!"
@@ -27,7 +27,4 @@ module.exports = {
             }
         }
     }
-} // That's it, Let's check it.
-//Let's check it
-
-// Let's create function for multiple File Upload
+} 
